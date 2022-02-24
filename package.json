@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist/",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup-test": "playwright install",
+    "test": "playwright test --config=tests/playwright.config.ts",
     "build": "npm run clean && webpack --mode production --config webpack.config.js",
     "start-node": "node dist/bundle.js",
     "start": "webpack serve --mode development --config webpack.config.js",
@@ -14,6 +15,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@playwright/test": "^1.19.1",
     "css-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
     "rimraf": "^3.0.2",
