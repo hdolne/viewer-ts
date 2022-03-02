@@ -31,7 +31,7 @@ module.exports = {
     filename: 'index.html',
   })],
   devServer: {
-    host: 'http://localhost/',
+    host: 'localhost',
     port: '5555',
   }
 };
