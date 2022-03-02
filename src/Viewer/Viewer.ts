@@ -21,20 +21,24 @@ export class Viewer {
     const prev = document.createElement('img');
     prev.className = 'button';
     prev.src = './assets/previous-svgrepo-com.svg';
+    prev.id = 'previous'
     prev.onclick = () => this.page(-1);
 
     const next = document.createElement('img');
     next.src = './assets/previous-svgrepo-com.svg';
     next.className = 'button';
+    next.id = 'next'
     next.style.transform = 'rotate(180deg)';
     next.onclick = () => this.page(1);
 
     const distance = document.createElement('img');
     distance.className = 'button';
+    distance.id = 'distance-tools'
     distance.src = './assets/distance-svgrepo-com.svg';
     distance.onclick = () => this.activeTool();
 
     this.toolbar.className = 'toolbar';
+    this.toolbar.id = 'toolbar';
     this.toolbar.appendChild(prev);
     this.toolbar.appendChild(next);
     this.toolbar.appendChild(distance);
